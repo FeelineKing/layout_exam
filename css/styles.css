@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-size: normal;
+  text-decoration: none;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-decoration: none;
+  font-size: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+}
+
+.person {
+  display: block;
+  width: 200px;
+  padding: 0 10px 15px 10px;
+  background-color: white;
+  transition: transform 1s;
+  margin-bottom: -15px;
+}
+.person__photos {
+  position: relative;
+  margin-bottom: 4px;
+}
+.person__photo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: border-radius 1s;
+}
+.person__rank {
+  position: absolute;
+  top: 84px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8B0000;
+  font-weight: bold;
+}
+.person__details {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.person__name {
+  color: #2F4F4F;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.person__extra {
+  opacity: 0;
+  font-size: 18px;
+  transition: font-size 1s;
+}
+.person__pay {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+}
+
+.person:hover {
+  background: #eee;
+  border-radius: 10px;
+  transform: scale(1.2);
+  z-index: 1;
+}
+.person:hover .person__photo {
+  border-radius: 25%;
+}
+.person:hover .person__extra {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1500px) {
+  .main {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media screen and (max-width: 999px) {
+  .main {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media screen and (max-width: 750px) {
+  .main {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

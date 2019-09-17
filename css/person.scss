@@ -1,0 +1,77 @@
+.person {
+  display: block;
+  width: 200px;
+  padding: 0 10px 15px 10px;
+  background-color: white;
+  transition: transform 1s;
+  margin-bottom: -15px;
+
+  &__photos {
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: border-radius 1s;
+  }
+
+  &__rank {
+    position: absolute;
+    top: 84px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B0000;
+    font-weight: bold;
+  }
+
+  &__details {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__name {
+    color: #2F4F4F;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__extra {
+    opacity: 0;
+    font-size: 18px;
+    transition: font-size 1s;
+  }
+
+  &__pay {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+  }
+}
+
+.person:hover {
+  background: #eee;
+  border-radius: 10px;
+  transform: scale(1.2);
+  z-index: 1;
+
+  .person__photo {
+    border-radius: 25%;
+  }
+
+  .person__extra {
+    opacity: 1;
+  }
+}
